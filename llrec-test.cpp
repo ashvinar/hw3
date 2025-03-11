@@ -84,9 +84,24 @@ int main(int argc, char* argv[])
     Node* head = readList(argv[1]);
     cout << "Original list: ";
     print(head);
-
+    
     // Test out your linked list code
+    Node* smaller = nullptr;
+    Node* larger = nullptr;
+/*
+    llpivot(head, smaller, larger, 8);
 
+    cout << "Updated" << endl;
+
+    print(head);
+    print(smaller);
+    print(larger);
+*/
+
+    Node* filteredEven = llfilter(head, isEven);
+    std::cout << "\nFiltered (Even numbers):\n";
+    printList(filteredEven);
+    print(head);
 
 
     
